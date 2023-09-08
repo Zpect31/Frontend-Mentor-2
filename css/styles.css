@@ -1,0 +1,135 @@
+:root {
+
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Darkdcyan: hsl(158, 60%, 14%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --fraunces: 'Fraunces', serif;
+    --montserrat: 'Montserrat', sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--Cream);
+}
+
+p {
+    font-family: var(--montserrat);
+    font-size: 1.4rem;
+    color: var(--Darkgrayishblue);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--fraunces);
+    color: var(--Verydarkblue);
+    margin-top: 0;
+}
+
+img {
+    width: 100%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+@media (min-width: 375px) {
+    img {
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+    }
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    border-radius: 1rem;
+    margin: 3rem 1rem;
+}
+
+@media (min-width: 375px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: min(90%, 53rem);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.content-container {
+    padding: 2rem;
+}
+
+.product {
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    margin-top: .5rem;
+}
+
+.price {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.price__new {
+    font-size: 3rem;
+    color: var(--Darkcyan);
+    font-family: var(--fraunces);
+
+}
+
+.price__old {
+    text-decoration: line-through;
+    font-family: var(--montserrat);
+}
+
+.button {
+    background-color: var(--Darkcyan);
+    border: none;
+    width: 100%;
+    color: var(--White);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.button-text {
+    color: var(--White);
+}
+
+.button:hover {
+    background-color: var(--Darkdcyan);
+}
